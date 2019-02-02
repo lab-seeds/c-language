@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(){
+	int sum , kor, eng;
+	double avg;
+	char name[100];
+	
+	FILE *in, *out;   // declare file valiable 
+	
+	in = fopen("input01.txt","r");   //r:read, w:write, a:append
+	out = fopen("output01.txt","w");
+	
+	
+	fscanf(in, "%s %d %d", name , &kor, &eng);
+	sum = kor + eng;
+	avg = (kor + eng)/ 2.0;
+
+	fprintf(out, "%s %d %.1lf \n", name, sum, avg);
+	
+	fclose(in);
+	fclose(out);
+	
+	return 0;
+}
