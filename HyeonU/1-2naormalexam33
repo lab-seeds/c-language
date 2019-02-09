@@ -1,0 +1,42 @@
+#include<stdio.h>
+
+int main(){
+	
+	//1~100
+	
+	FILE *out;
+	
+	out = fopen("textfile_01.txt","w");
+	
+	int i;
+	for(i = 1;i<=100;i++){
+		fprintf(out,"%d\n",i);
+	}
+	fclose(out);
+	
+	//1-2
+	
+	int s1 = 0, s2 = 0;
+	FILE *in;
+	in = fopen("textfile_01.txt","r");
+	int n1,n2;
+	
+	
+	
+	fscanf(in,"%d",&n1);
+	do{
+		fscanf(in,"%d",&n2);
+	}while(fscanf(in,"%d",&n2) == 1);
+	
+	for(i = n1; i<= n2; i++){
+		s1 += i;
+		if((i%3)==0){
+			s2 += i*i;
+		}
+	}
+	
+	printf("\n%d %d\n",s1,s2);
+	fclose(in);
+	
+	return 0;
+}

@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+FILE *in = fopen("textfile_01.txt","r");
+int num;
+
+int main(){
+	int s1=0,s2=0;
+	while(fscanf(in,"%d\n",&num)==1){
+		
+		s1 += num;
+		if(num%3 == 0){
+			s2 += num*num;
+		}
+	}
+	printf("%d %d %d \n",num,s1,s2);
+	fclose(in);
+	return 0;
+}

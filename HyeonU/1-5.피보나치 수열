@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main(){
+	int a = 1, b = 1, c ,s = a + b, n = 2;
+	do{
+		c = a+b;
+		s += c;
+		a = b;
+		b = c;
+		n++;
+	}while(n != 100);
+	
+	printf("\n%d\n",s);
+	return 0;
+}
