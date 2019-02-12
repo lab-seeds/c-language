@@ -3,7 +3,6 @@
 
 int main(void)
 {
-
 	double  K = 0, L = 0, S = 0, NN = 0;
 	bool SW = true;
 
