@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main(){
+	int n = 1, f = 1, s = 1;
+	
+	do{
+		n++;
+		f *= n;
+		s += f;
+		printf(" %d ",f);
+	}while(!(n==100));
+	printf("\n%d\n",s);
+	
+	return 0;
+}
