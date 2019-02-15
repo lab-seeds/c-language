@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+int main(){
+	double k = 0;
+	int sw = 0;
+	double l = 0,s = 0;
+	do{
+		k++;
+		
+		l = k / ( ( k + 1 ) * ( k + 2 ) );
+		
+		
+		if(sw == 0){
+			
+			s += l;
+			sw = 1;
+			
+		}
+		else{
+			
+			s -= l;
+			sw = 0;
+			
+		}
+		
+	}while(!(k == 49));
+	
+	printf("\n%lf\n",s);
+	
+	return 0;
+}
