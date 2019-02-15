@@ -1,0 +1,14 @@
+#include<stdio.h>
+
+int main(){
+	int r = 3, a = 2, n =2;
+	int s = a;
+	do{
+		a *= r;
+		s += a;
+		printf(" %d ",a);
+		n++;
+	}while(!(n>200));
+	printf("\n%d\n",s);
+	return 0;
+}
