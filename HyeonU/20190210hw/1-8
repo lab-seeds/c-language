@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main(){
+	int n = 0,s = 0;
+	
+	do{
+		n++;
+		s += n;
+		printf(" %d ",s);
+		n++;
+		s -= n;
+		printf(" %d ",s);
+	}while(!(n == 100));
+	printf("\n%d\n",s);
+	
+	return 0;
+}
