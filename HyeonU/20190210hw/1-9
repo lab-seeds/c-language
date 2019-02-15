@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int main(){
+	int n = 0,s = 0;
+	int sw =1;
+	int nn;
+	do{
+		n++;
+		nn = 5 * n;
+		if(sw == 1){
+			s += nn;
+		}
+		else{
+			s -= nn;
+		}
+		sw = -sw;
+	}while(!(nn == 100));
+	printf("\n%d\n",s);
+	
+	return 0;
+}
