@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main()
+{
+	int N = 1,F = 1,S = 1;
+	int i;
+	for(i=0;;i++)
+	{
+		N = N + 1;
+		F = F * N;
+		S = S + F; 
+	 
+    if(N==100) break;
+		
+	}
+	printf("%d ",S);
+	
+	
+	return 0;
+}
