@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main(){
+	int a = 2, d = 6, n =2;
+	int s = a;
+	int an;
+	do{
+		an = a + (n-1) * d;
+		s += an;
+		printf(" %d ",an);
+		n++;
+	}while(!(n>200));
+	printf("\n%d\n",s);
+	return 0;
+}
