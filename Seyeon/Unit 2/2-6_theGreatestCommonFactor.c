@@ -2,6 +2,8 @@
 
 int num1 = 192, num2 = 72;
 int a = num1, b = num2, c = 0;
+
+//I referred HyeonU's code
 void TGCF()
 {
 	while(1)
