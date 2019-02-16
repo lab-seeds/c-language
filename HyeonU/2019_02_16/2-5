@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+	int temp = 104;	
+	int copy = temp;
+	int i,cnt=0;
+	int j,cot=0;
+	int rm[20];
+	for(i = 2; i < sqrt(copy); i++){
+		while(temp%i == 0){
+			temp = temp / i;
+			rm[cnt] = i;
+			cnt++;
+		}
+	}
+	printf("%d = ",copy);	
+	for(cnt = 0; rm[cnt]; cnt++){
+		printf(" %d *",rm[cnt]);
+	}
+	printf("%d",temp);
+	return 0;
+}
