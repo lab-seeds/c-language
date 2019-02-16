@@ -6,9 +6,9 @@ int main(void)
 {
 	int num = 523;
 	bool isPrime = false;
-	//int snum = sqrt(num);
+	int snum = sqrt(num);
 	
-	for(int i = 2; i < num; i++)
+	for(int i = 2; i <= snum; i++)
 	{
 		if((num % i) == 0)
 		{
