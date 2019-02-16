@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){ // uncomplete
+	int f = 192, s = 72;
+	int a = f, b = s, c = 0;
+	
+	while(1){
+		c = a%b;
+		if(c == 0)break;
+		a = b;
+		b = c;	
+	}
+	printf("\n%d와 %d의 최대공약수 = %d\n",f,s,b); 
+	return 0;
+}
