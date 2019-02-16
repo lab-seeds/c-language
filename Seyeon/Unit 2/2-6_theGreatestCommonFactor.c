@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int num1 = 192, num2 = 71;
+int num1 = 192, num2 = 72;
 int a = num1, b = num2, c = 0;
 void TGCF()
 {
@@ -11,6 +11,7 @@ void TGCF()
 			break;
 		a = b;
 		b = c;
+		printf("%d %d %d\n", a, b, c);
 	}
 	printf("%d", b);	
 }
