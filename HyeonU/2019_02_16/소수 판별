@@ -15,9 +15,9 @@ int main(){
 		
 	}
 	if(cnt == 0){
-		printf("소수임");
+		printf("%d는 소수입니다.",temp);
 	}else{
-		printf("소수 아님");
+		printf("%d는 소수가 아닙니다",temp);
 	}
 	return 0;
 }
