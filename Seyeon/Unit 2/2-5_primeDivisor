@@ -3,7 +3,8 @@
 
 int main(void)
 {
-	int num = 104, temp = 104;
+	int num = 104;
+	int temp = num;
 	int i, j, index = 0;
 	int a[20] = { 0 };
 	
