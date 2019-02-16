@@ -6,13 +6,9 @@ int main(){
 	int cnt=0;	
 	int i;
 	for(i = 2; i < sqrt(temp); i++){
-		
 		if(temp % i  == 0){
-			
 			cnt++;
-			
 		}
-		
 	}
 	if(cnt == 0){
 		printf("%d는 소수입니다.",temp);
