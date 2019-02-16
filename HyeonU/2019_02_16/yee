@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main(){
+	FILE *nm;
+	nm = fopen("textfile_01.txt","r");
+	
+	int num[100];
+	int i = 0,max = 0, min = 0,sum = 0;
+	double avg = 0;
+	
+	while(fscanf(nm,"%d",num+i)==1){
+		i++;
+	}
+	
+	for(i = 0; i < 100; i++){
+		if(num[i] > num [i+1]){
+			max = num[i];
+		}
+		else{
+			max = num[i+1];
+		}
+	}
+	
+	for(i = 0; i < 100; i++){
+		if(num[i] < num [i+1]){
+			min = num[i];
+		}
+		else{
+			min = num[i+1];
+		}
+	}
+	
+	for(i = 0; i<100; i++){
+		sum += num[i];
+	}
+	
+	avg = sum/i;
+	
+	printf("\n최대값 : %d\n",max);
+	printf("\n최소값 : %d\n",min);
+	printf("\n총합 : %d\n",sum);
+	printf("\n평균 : %.1lf\n",avg);
+	fclose(nm);
+	return 0;
+}
