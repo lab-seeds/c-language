@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+	int temp = 523;
+	int cnt=0;	
+	int i;
+	for(i = 2; i < sqrt(temp); i++){
+		
+		if(temp % i  == 0){
+			
+			cnt++;
+			
+		}
+		
+	}
+	if(cnt == 0){
+		printf("소수임");
+	}else{
+		printf("소수 아님");
+	}
+	return 0;
+}
