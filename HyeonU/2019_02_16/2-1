@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main(){
+	int jumsu[100] = {0};
+	//점수 입력 
+	int cnt = 0;
+	int i = 1;
+	do{
+		if(jumsu[i]>=80)cnt++;
+		i++;
+		
+	}while(i<100);
+	printf("%d",cnt);
+	return 0;
+}
