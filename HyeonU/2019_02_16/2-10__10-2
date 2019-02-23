@@ -12,7 +12,6 @@ int main(){
 		else if(fn % 2 == 0){
 			i[cnt] = '0';
 			cnt++;
-			
 		}
 		if(fn == 1)break;
 		fn /= 2;
