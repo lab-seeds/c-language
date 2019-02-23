@@ -28,7 +28,7 @@ int main(void)
 		for(j = 0; j < 5; j++)
 			printf("%d\t", a[i][j]);
 			
-		printf("\n\n\n");
+		printf("\n");
 	}
 	
 	return 0;
