@@ -8,7 +8,7 @@ int main(void)
 	int j = i;
 	while(1)
 	{
-		a[i] = num % 2;
+		a[j] = num % 2;
 		num /= 2;
 		j++;
 		if(num == 0)
