@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+int main(){
+	int fn = 72;
+	char i[100];
+	int cnt = 0;
+	
+	while(1){
+		if(fn % 2 == 1){
+			i[cnt] = '1';
+			cnt++;
+		}
+		else if(fn % 2 == 0){
+			i[cnt] = '0';
+			cnt++;
+			
+		}
+		if(fn == 1)break;
+		fn /= 2;
+	}
+	
+	while(cnt >= 0){
+		printf("%c",i[cnt]);
+		cnt--;
+	}
+	
+	
+	
+	return 0;
+}
