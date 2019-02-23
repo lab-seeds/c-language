@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<math.h>
+
+int main(){//101010
+	int bin[]={1,0,1,0,1,0};
+	int teen;
+	int i = 0;
+	int cnt;
+	cnt = sizeof(bin) / sizeof(int) - 1;
+	while(cnt >= 0){
+		teen += bin[i] * pow(2,cnt);
+		cnt--;
+		i++;
+	}
+	printf("%d",teen);
+	return 0;
+}
