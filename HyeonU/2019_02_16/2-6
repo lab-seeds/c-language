@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+int main(){
+	int a[10] = {0};
+	int cnt = 0, i = 0;
+	int num,n1,n2;
+	do{
+		i++;
+		n1 = a[i]%3;
+		n2 = a[i]%4;
+		
+		num = n1 + n2;
+		
+		if(num == 0)cnt++;
+		
+	}while(i<10);
+	
+	printf("%d",cnt);
+	
+	return 0;
+}
