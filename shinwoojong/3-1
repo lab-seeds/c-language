@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+	int a[5][5];
+	int v = 0;
+
+
+	for(int r=0;r<5;r++)
+	{
+		for(int c=0;c<5;c++)
+		{
+			v= v + 1;
+			a[r][c] = v;
+			
+		}
+	}
+	for(int r=0;r<5;r++)
+	{
+		for(int c=0;c<5;c++)
+		{
+			printf("%d \t",a[r][c]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
