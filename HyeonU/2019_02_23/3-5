@@ -4,7 +4,7 @@ int main(){
 	int a[5][5] = {0};
 	int v = 0;
 	int r = 0,c;
-	int len = 1;
+	int len = 2;
 	int pos = 2;
 	do{
 		c = pos;
@@ -13,12 +13,12 @@ int main(){
 			a[r][c] = v;
 			c++;
 			
-		}while(c<len+1);
+		}while(c<len);
 		r++;
 		len+=2;
 		pos--;
 	}while(r<3);
-	len-=3;
+	len-=4;
 	pos++;
 	do{
 		len--;
