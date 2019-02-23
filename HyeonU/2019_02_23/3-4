@@ -1,0 +1,42 @@
+#include<stdio.h>
+
+int main(){
+	int a[5][5] = {0};
+	int v = 0;
+	int cnt = 5;
+	int r = 0,c = -1;
+	int t = 1;
+	int p;
+	
+	while(1){
+		for(p=0;p<cnt;p++){
+			v++;
+			c += t;
+			a[r][c] = v;
+			
+		}
+		
+		cnt--;
+		if(cnt <= 0)break;
+		
+		for(p=0;p<cnt;p++){
+			v++;
+			r += t;
+			a[r][c] = v;
+			
+		}
+		
+		t *= (-1);
+	}
+	printf("\n");
+	int i,j;
+	for(i=0;i<5;i++){
+		for(j=0;j<5;j++){
+			printf("%d ",a[i][j]);
+		}
+		printf("\n");
+	}
+	
+	
+	return 0;
+}
