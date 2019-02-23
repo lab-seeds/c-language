@@ -12,7 +12,8 @@ int main(void)
     	temp = a[i];
     	a[i] = a[(size - 1) - i];
     	a[(size - 1) - i] = temp;
-    }
+    	}
+	
 	for(int i = 0; i < size; i++)
 	{
 		num += pow(2, i) * a[i];
