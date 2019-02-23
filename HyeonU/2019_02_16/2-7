@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(){
+	int tn;
+	int sum;
+	int n;
+	int k;
+	int j;
+	int r;
+	
+	for(n=4;n<500;n++){
+		sum = 0;
+		k = n/2;
+		for(j = 1; j<k;j++){
+			r = n%j;
+			if(r == 0)break;
+			sum += j;
+		}
+		if(n==sum)break;
+		printf("\n%d\n",n);
+		tn++;
+	}
+	printf("\n%d\n",tn);
+	
+	return 0;
+}
