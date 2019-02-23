@@ -7,16 +7,9 @@ int main(void)
 	int temp;
 	int size = sizeof(a) / sizeof(int);
 	
-  	for (int i = 0; i < size / 2; i++) 
+	for(int i = size - 1; i >= 0; i--)
 	{
-    	temp = a[i];
-    	a[i] = a[(size - 1) - i];
-    	a[(size - 1) - i] = temp;
-    	}
-	
-	for(int i = 0; i < size; i++)
-	{
-		num += pow(2, i) * a[i];
+		num += pow(2, size - i - 1) * a[i];
 	}
 	printf("%d", num);
 	
