@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int gcd(int f, int s){
+	int a = f, b = s, c = 0;
+	while(1){
+		c = a%b;
+		if(c == 0)break;
+		a = b;
+		b = c;	
+	}
+	return b;
+}
+
+int main(){
+	int x=0,y=0;
+	scanf("%d",&x);
+	scanf("%d",&y);
+	int temp=0;
+	if(x>=y){
+		temp = x;
+		x = y;
+		y = temp;
+	}
+	int m = x%y;
+	int a,b;
+	if(!(m == 0)){
+		a = y;
+		b = m;
+		printf("\n%d\n",gcd(a,b));
+	}
+	else{
+		printf("\n%d\n",y);
+	}
+	
+	return 0;
+}
