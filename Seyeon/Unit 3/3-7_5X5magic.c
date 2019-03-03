@@ -4,13 +4,8 @@ int main(void)
 {
 	int a[5][5] = {0};
 	int i = 0, num = 1, l = 5;
-	int r = 0, c;
+	int r = 0, c = l / 2;
 	int tempr, tempc;
-	
-	if((l % 2) != 0)
-		c = l / 2;
-	else 
-		c = l / 2 - 1;
 	
 	for(i = 0; i < (l * l); i++)
 	{
