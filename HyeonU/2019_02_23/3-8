@@ -1,0 +1,40 @@
+#include<stdio.h>
+
+int main(){ 
+	int a[5][5] = {0};
+	int v = 0;
+	int r=0,c;
+	do{
+		c = 0;
+		do{
+			v++;
+			a[r][c] = v;
+			c++;
+		}while(c<5);
+		r++;
+	}while(r<5);
+	int b[5][5] = {0};
+	int nu;
+	for(r = 0;r < 5;r++){
+		for(c = 0;c < 5;c++){
+			nu = 4 - r;
+			b[c][nu] = a[r][c];
+		}
+	}
+	int i,j;
+	printf("초기 배열 \n\n");
+	for(i=0;i<5;i++){
+		for(j=0;j<5;j++){
+			printf("%d\t",a[i][j]);
+		}
+		printf("\n");
+	}
+	printf("\n\n회전 후 배열\n\n");
+	for(i=0;i<5;i++){
+		for(j=0;j<5;j++){
+			printf("%d\t",b[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
