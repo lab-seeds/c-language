@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+int main(){ // ??
+	
+	int a[5][5];
+	int v = 1;
+	int d = 1;
+	int c1 = 0;
+	int c2 = 4;
+	int temp;
+	int r,c;
+	for(r=0;r<5;r++){
+		for(c = c1;(c1 > c2) ? c>=c2 : c<=c2 ; c += d){
+			a[r][c] = v;
+			v++;
+		}
+		temp = c1;
+		c1 = c2;
+		c2 = temp;
+		d *= -1;
+	}
+	int i,j;
+	for(i=0;i<5;i++){
+		for(j=0;j<5;j++){
+			printf("%d ",a[i][j]);
+		}
+		printf("\n");
+	}
+	
+	return 0;
+}
