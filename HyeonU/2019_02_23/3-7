@@ -3,7 +3,7 @@
 int main(){ // ↗방향 
 	int a[5][5] = {0};
 	int num = 1;
-	int r = 100,c = 2;
+	int r = 25,c = 2;
 	while(num<26){
 		a[r%5][c%5] = num;
 		num++;
