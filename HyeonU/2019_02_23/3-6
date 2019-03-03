@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int main(){ // ??
+int main(){
 	
 	int a[5][5];
 	int v = 1;
