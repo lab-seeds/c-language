@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+int main(){ 
+	int a[5][5] = {0};
+	int num = 1;
+	int r = 100,c = 2;
+	while(num<26){
+		a[r%5][c%5] = num;
+		num++;
+		if(num%5 == 1)r++;
+		else{
+		r--;
+		c++;
+		}
+	}
+	int i,j;
+	for(i=0;i<5;i++){
+		for(j=0;j<5;j++){
+			printf("%d\t",a[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
