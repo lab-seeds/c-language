@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+	int a[20];
+	int i,j;
+	int temp;
+	int l=1;
+	for(i=0;i<20;i++)
+	{
+		a[i] = rand() % 100;
+	}
+	
+	for(i=0;i<19;i++)
+	{
+		for(j=0;j<19-i;j++)
+		{
+			if(a[j] > a[j+1])
+			{
+				temp = a[j];
+				a[j] = a[j+1];
+				a[j+1] = temp;
+			}
+			
+		}
+			
+	}
+
+	
+	for(i=0;i<20;i++)
+	{
+		printf("%d\n",a[i]);
+	}
+}
+
+return 
