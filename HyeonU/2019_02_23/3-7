@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int main(){ 
+int main(){ // ↗방향 
 	int a[5][5] = {0};
 	int num = 1;
 	int r = 100,c = 2;
