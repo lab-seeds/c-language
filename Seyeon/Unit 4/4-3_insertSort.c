@@ -8,13 +8,13 @@ int main(void)
 	
 	for(i = 0; i < 10; i++)
 	{
-		for(j = 0; j < i + 1; j++)
+		for(j = i + 1; j > 0; j--)
 		{
-			if(a[j] > a[j + 1])
+			if(a[j - 1] > a[j])
 			{
 				temp = a[j];
-				a[j] = a[j + 1];
-				a[j + 1] = temp;
+				a[j] = a[j - 1];
+				a[j - 1] = temp;
 			}
 		}
 	}
