@@ -8,19 +8,19 @@ int main(void)
 	
 	for(i = 1; i < 10; i++)
 	{
+		temp = a[i];
 		for(j = i; j > 0; j--)
 		{
-			if(a[j - 1] > a[j])
+			if(a[j - 1] > temp)
 			{
-				temp = a[j];
 				a[j] = a[j - 1];
-				a[j - 1] = temp;
 			}
 			else
 			{
 				break;
 			}
 		}
+		a[j] = temp;
 	}
 	
 	for(i = 0; i < 10; i++)
