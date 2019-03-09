@@ -4,14 +4,14 @@ int main(void)
 {
 	int a[10] = {4, 8, 2, 0, 1, 9, 5, 7, 3, 6};
 	
-	int i, j, temp;
+	int i, j, key;
 	
 	for(i = 1; i < 10; i++)
 	{
-		temp = a[i];
+		key = a[i];
 		for(j = i; j > 0; j--)
 		{
-			if(a[j - 1] > temp)
+			if(a[j - 1] > key)
 			{
 				a[j] = a[j - 1];
 			}
@@ -20,7 +20,7 @@ int main(void)
 				break;
 			}
 		}
-		a[j] = temp;
+		a[j] = key;
 	}
 	
 	for(i = 0; i < 10; i++)
