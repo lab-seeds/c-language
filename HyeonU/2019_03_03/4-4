@@ -29,10 +29,6 @@ int main(){
 	for(i=0;i<10;i++){
 		a[i] = rand()%101;
 	}
-	printf("\n삽입 정렬 전\n");
-	for(i=0;i<10;i++){
-		printf("%d   ",a[i]);
-	}
 	ins_sort(a);
 	printf("\n삽입 정렬 후\n");
 	for(i=0;i<10;i++){
