@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+void ins_sort(int ar[]){
+	int i = 1;
+	int key;
+	int j;
+	do{
+		key = ar[i];
+		j = i - 1;
+		do{
+			if(ar[j]>key/*a[i]*/){
+				ar[j+1] = ar[j];
+				ar[j] = key;
+				j--;
+			}
+			else{
+				break;
+			}
+		}while(!(j<0));
+		i++;
+	}while(i<10);
+}
+int main(){
+	int a[10];
+	srand((unsigned)time(NULL));
+	int i;
+	for(i=0;i<10;i++){
+		a[i] = rand()%101;
+	}
+	printf("\n삽입 정렬 전\n");
+	for(i=0;i<10;i++){
+		printf("%d   ",a[i]);
+	}
+	ins_sort(a);
+	printf("\n삽입 정렬 후\n");
+	for(i=0;i<10;i++){
+		printf("%d   ",a[i]);
+	}
+	return 0;
+}
