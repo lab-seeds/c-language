@@ -5,31 +5,28 @@
 int main()
 {
 	int i,j;
-	int a[3] = {0};
+	int a[3] = {9,5,8};
 	int key;
-	srand((unsigned)time(NULL));
 	
 	for(i=0; i<3; i++)
 	{
-		a[i] = rand()%100;
+		printf("%d ",a[i]);
 	}
-	for(i=0; i<3; i++)
-	{
-		printf("%d\n",a[i]);
-	}
-
+	printf("\n");
 	for(i=1; i<3; i++)
 	{
 		key = a[i];
 		
-		for(j=i-1; j<=0; j--)
+		for(j=i-1; j>=0; j--)
 		{
-			if(key < a[j])
+			if(a[j] > key)
 			{
+				int temp = a[j+1];
 				a[j+1] = a[j];
+				a[j] = temp;
 				
 			}
-			else
+			else 
 			{
 				a[j+1] = key;
 				break;
@@ -38,7 +35,7 @@ int main()
 	}
 	for(i=0; i<3; i++)
 	{
-		printf("%d\n",a[i]);
+		printf("%d ",a[i]);
 	}
 	
 	
