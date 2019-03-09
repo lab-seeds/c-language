@@ -24,17 +24,13 @@ int main(void)
 		{
 			if(t1 >= 5)
 			{
-				for(j = t2; j < 5; j++)
-				{
-					c[i] = b[j];
-				}
+				c[i] = b[t2];
+				t2 += 1;
 			}
 			else
 			{
-				for(j = t1; j < 5; j++)
-				{
-					c[i] = a[j];
-				}
+				c[i] = a[t1];
+				t1 += 1;
 			}
 		}
 	}
