@@ -1,0 +1,58 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+void slct_sort(int ar[]){//완 
+	int i=0,j;
+	int temp;
+	do{
+		j = i + 1;
+		do{
+			if(ar[i] > ar[j]){
+				temp = ar[i];
+				ar[i] = ar[j];
+				ar[j] = temp;
+			}
+			j++;
+		}while(!(j>20));
+		i++;
+	}while(!(i>19));
+}
+void bubl_sort(int ar[]){ //미완 
+	int i = 0;
+	int j;
+	int temp;
+	do{
+		j = 0;
+		do{
+			if(ar[j]>ar[j+1]){
+				temp = ar[j];
+				ar[i] = ar[j+1];
+				ar[j+1] = ar[j];
+			}
+			j++;
+		}while(!(j>20-i));
+		i++;
+	}while(!(i>19));
+}
+int main(){
+	int a[10];
+	int b[10];
+	srand((unsigned)time(NULL));
+	int i;
+	for(i=0;i<10;i++){
+		a[i] = rand()%101;
+		b[i] = rand()%101;
+	}
+	slct_sort(a);
+	bubl_sort(b);
+	printf("선택 정렬\n");
+	for(i=0;i<10;i++){
+		printf("%d   ",a[i]);
+	}
+	printf("\n버블 정렬\n");
+	for(i=0;i<10;i++){
+		printf("%d   ",b[i]);
+	}
+	return 0;
+}
