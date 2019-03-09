@@ -6,9 +6,9 @@ int main(void)
 	
 	int i, j, temp;
 	
-	for(i = 0; i < 10; i++)
+	for(i = 1; i < 10; i++)
 	{
-		for(j = i + 1; j > 0; j--)
+		for(j = i; j > 0; j--)
 		{
 			if(a[j - 1] > a[j])
 			{
