@@ -4,28 +4,30 @@ int main(void)
 {
 	char alpha[LEN] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'};
 	int num[LEN] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-	int i, j, target = 2, value = LEN / 2;
+	int i, j, target = 7;
+	int left = 0, right = LEN - 1, mid;
 	
-	for(i = 0; i < value; i++)
+	for(i = 0; i < LEN / 2; i++)
 	{
-		if(num[value] == target)
+		mid = (left + right) / 2;
+		if(num[mid] == target)
 		{
 			break;
 		}
 		else
 		{
-			if(num[value] > target)
+			if(target > num[mid])
 			{
-				value = value / 2;
+				left = mid + 1;
 			}
 			else
 			{
-				value = value / 2 + value;
+				right = mid - 1;
 			}
 		}
 	}
 	
-	printf("alphabet : %c \nnumber : %d\n", alpha[value], num[value]);
+	printf("alphabet : %c \nnumber : %d\n", alpha[mid], num[mid]);
 	
 	return 0;
 }
