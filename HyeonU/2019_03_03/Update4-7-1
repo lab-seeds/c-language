@@ -1,0 +1,93 @@
+#include<stdio.h>
+
+#include<stdlib.h>
+
+#include<time.h>
+
+
+
+void ins_sort(int ar[]){ 
+
+	int j,i = 1;
+
+	int key;
+
+	do{
+
+		key = ar[i];
+
+		j = i - 1;
+
+		do{
+
+			if(ar[j]>key/*a[i]*/){
+
+				ar[j+1] = ar[j];
+
+				ar[j] = key;
+
+				j--;
+
+			}
+
+			else{
+
+				break;
+
+			}
+
+		}while(!(j<0));
+
+		i++;
+
+	}while(i<10);
+
+}
+
+int main(){
+
+	int a[10] = {43,32,123,634,2,14,3,90,1,100};
+	int ia = sizeof(a)/sizeof(a[0]); //10
+	int l,m,h;
+	ins_sort(a);
+
+	for(int i = 0;i < ia; i++){
+		printf("%d\t",a[i]);
+	}
+	    printf("%d",ia);
+	int in ;
+
+	do{
+
+	    printf("\n찾을 수 입력 : ");
+    	scanf("%d",&in);
+    	l = 0;
+    	h = ia-1;
+    	m;
+
+		do{
+	
+			m = (l+h)/2;
+	        if(a[m] == in){
+	          	printf("%d\n",a[m]);
+			    break;	
+			}else if(in > a[m]){
+				l = m+1;
+				printf("작다 %d\n",l);
+			}else if(in <a[m]){
+				h = m -1;
+				printf("크다 %d\n",h);
+			}else if(in == 0){
+				break;
+			}else {
+				printf("찾고자하는 값이 없습니다. 다시 입력해 주세요\n");
+				break;
+			}
+	
+		}while(in !=0);
+
+	}while(in != 0);
+
+	return 0;
+
+}
