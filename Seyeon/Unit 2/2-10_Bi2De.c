@@ -2,7 +2,7 @@
 #include<math.h>
 int main(void)
 {
-	int a[6] = {1, 0, 1, 0, 1, 0};
+	int a[8] = {1, 1, 0, 1, 1, 0, 1, 0};
 	int num = 0;
 	int temp;
 	int size = sizeof(a) / sizeof(int);
