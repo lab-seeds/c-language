@@ -3,7 +3,7 @@
 int main()
 {
 	int a[20];
-	int n = ;
+	int n = 19;
 	int mok;
 
 	int i = -1;
