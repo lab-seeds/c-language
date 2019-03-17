@@ -1,0 +1,16 @@
+#include <stdio.h> //2진수 10진수로 변환하기
+#include <math.h>
+int main()
+{
+	int a[8] = {1,1,0,1,1,0,1,0};
+	int i;
+	int sum = 0;
+	
+	for(i=0;i<8;i++)
+	{
+		sum += a[i] * pow(2, 7-i);
+	}
+	printf("%d",sum);
+	
+	return 0;
+}
