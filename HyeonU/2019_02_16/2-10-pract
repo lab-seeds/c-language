@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include <math.h>
+
+int main(){
+	int arr[] = {1,1,0,1,1,0,1,0};
+	int sz = sizeof(arr)/sizeof(int);
+	int rra[sz];
+	int i = 0,j=sz-1;
+	while(i<sz){
+		if(j>=0){
+			rra[i] = arr[j];
+			i++;
+			j--;
+		}
+	}
+	int sum;
+	for(i = 0; i<sz;i++){
+		sum += rra[i] * pow(2,i);
+	}
+	printf("%d",sum);
+	return 0;
+}
