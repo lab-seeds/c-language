@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+	int a[20];
+	int n = ;
+	int mok;
+
+	int i = -1;
+	
+	while(n!=0)
+	{
+		mok = n / 2; 
+		i++; 
+		//printf("%d", mok);
+		a[i] = n - mok * 2;
+		n = mok;
+		
+	}
+	for(int j = i;j >=0 ;j--)
+	{
+		printf("%d", a[j]);
+	}
+	
+
+	return 0;	
+}
