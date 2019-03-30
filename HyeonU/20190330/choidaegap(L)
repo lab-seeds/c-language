@@ -11,6 +11,8 @@ int main(){
 			arr[i][j] = rand()%101;
 		}
 	}
+	
+	
 	int max = 0;
 	int cnt = 0;
 	int l[81] = {0}, c[81] = {0};
@@ -26,15 +28,17 @@ int main(){
 				}
 				l[cnt] = i;
 				c[cnt] = j;
-				cnt++;
 			}
 			else if(arr[i][j] == max){
+				cnt ++;
 				l[cnt] = i;
 				c[cnt] = j;
-				cnt ++;
+				
 			}
 		}
 	}
+	
+	
 	printf("최댓값 = %d\n", max);
 	printf("위치 = \n");
 	for(cnt = 0;(c[cnt]) && (l[cnt]);cnt++){
