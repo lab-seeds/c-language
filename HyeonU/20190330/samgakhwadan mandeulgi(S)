@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+struct way{
+	int l;
+	int r;
+	int h;
+} way[100];
+
+int main(){
+	int tot = 0;
+	printf("수 입력 : ");
+	scanf("%d",&tot);
+	
+	int j,m,t;
+	int cnt = 0;
+	for(j = 1;j<=tot ;j++){
+		for(m = j;m<=tot ;m++){
+			for(t = m;t<=tot ;t++){
+				if(((j+m+t)==9)&&(j+m>t)){
+					way[cnt].h = j;
+					way[cnt].l = m;
+					way[cnt].r = t;
+					cnt++;
+					
+				}
+			}
+		}
+	}
+	printf("경우의 수 = %d가지\n",cnt);
+	int i;
+	for(i = 0; i < cnt; i++){
+		printf("%d     %d     %d\n",way[i].h,way[i].l,way[i].r);
+	}
+	return 0;
+}
