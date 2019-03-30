@@ -3,7 +3,7 @@
 int main(void)
 {
 	int *pond;
-	int i, pondSize, net, sum, temp = 0;
+	int i, j, pondSize, net, sum, temp = 0;
 	
 	scanf("%d", &pondSize);
 	
@@ -15,7 +15,10 @@ int main(void)
 		
 	for(i = 0; i < (pondSize - net) + 1; i++)
 	{
-		sum = pond[i] + pond[i + 1] + pond[i + 2];
+		sum = 0;
+		for(j = 0; j < net; j++)
+			sum += pond[i + j];
+			
 		if(sum > temp)
 			temp = sum;
 	}
