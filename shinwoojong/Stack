@@ -1,0 +1,88 @@
+#include <stdio.h>
+#include <iostream>
+
+#define true 1
+#define false 0
+#define LEN 5
+
+typedef int Data;
+
+typedef struct array_stack
+{
+	Data Arr[LEN];
+	int top;
+} array_stack;
+
+typedef array_stack Stack;
+
+void stack_init(Stack *pstack)
+{
+	pstack->top = -1;
+}
+
+int IsEmpty(Stack *pstack)
+{
+	if(pstack->top == -1) 
+	{
+		return true;	
+	}
+	else
+	{
+		return 0;
+	}
+}
+
+void Push(Stack *pstack, Data Data)
+{
+	pstack->top += 1;
+	pstack->Arr[pstack->top] = Data;
+}
+
+int Pop(Stack *pstack)
+{
+	if(IsEmpty)
+	{
+		printf("memory error!");
+	}
+	int a = pstack->Arr[pstack->top];
+	pstack->top -= 1;
+	return a;
+}
+
+Data peek(Stack *pstack)
+{
+	if(IsEmpty(pstack) == true)
+	{
+		printf("memory error!");
+		exit(-1);
+	}
+}
+
+void print(Stack *pstack)
+{
+	int i;
+	if(IsEmpty(pstack) == true)
+	{
+		printf("memory error!");
+		exit(-1);
+	}
+	
+	for(i=0; i<(pstack->top)+1; i++)
+	{
+		printf("%d \n",pstack->Arr[i]);
+	}
+}
+
+int main()
+{
+	Stack stack;
+	stack_init(&stack);
+	
+	Push(&stack, 1);
+	Push(&stack, 4);
+	Push(&stack, 5);
+	Push(&stack, 3);
+	Push(&stack, 1);
+	
+	print(&stack);
+}
