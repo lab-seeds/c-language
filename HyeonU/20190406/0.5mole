@@ -1,0 +1,74 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<time.h>
+#include <algorithm>
+
+int gnd[101][101],n,cnt,size[101];
+
+void gndin(){
+	int i,j;
+	printf("배열 길이 입력 : ");
+	scanf("%d",&n);
+	for(i = 0; i < n; i++){
+		for(j = 0;j < n; j++){
+			scanf("%d",&(gnd[i][j]));
+		}
+	}
+}
+int check(int a, int b){
+	if(((a>0)&&(b>0))&&((a<n)&&(b<n))){
+		return 1;
+	}
+	return 0;
+}
+int cmp(int a, int b){
+	return a>b;
+}
+void dfs(int a, int b, int c){
+		gnd[a][b] =c;
+		if(check(a+1,b)&&gnd[a][b] == 1) dfs(a+1,b,c);
+		if(check(a-1,b)&&gnd[a][b] == 1) dfs(a-1,b,c);
+		if(check(a,b+1)&&gnd[a][b] == 1) dfs(a,b+1,c);
+		if(check(a,b-1)&&gnd[a][b] == 1) dfs(a,b-1,c);
+	
+}
+
+void solve(){
+	int i,j;
+	for(i = 0; i<n; i++){
+		for(j = 0;j<n;j++){
+			if(gnd[i][j] == 1){
+				cnt++;
+				dfs(i,j,cnt+1);
+			}
+		}
+	}
+	for(i = 0; i< n; i++){
+		for(j = 0; j<n; j++){
+			if(gnd[i][j]){
+				size[gnd[i][j] - 2]++;
+			}
+		}
+	}
+	std::sort(size, size+cnt, cmp);
+	
+}
+void gndot(){
+	printf("\n\n\n\n\n\n");
+	int i,j;
+	for(i=0; i<n; i++){
+		for(j=0; j<n; j++){
+			printf("%d ", gnd[i][j]);
+		}
+		printf("\n");
+	}
+}
+int main(){
+	
+	gndin();
+	solve();
+	gndot();
+	
+	return 0;
+}
