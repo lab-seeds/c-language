@@ -1,0 +1,49 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#include<time.h>
+
+int queue[10];
+int front,rear;
+
+int setting(){
+	front = 0;
+	rear = 0;
+}
+
+void put(int k){
+	if(rear>=10){
+		printf("memory error!");
+		exit(1);
+	}
+	queue[rear] = k;
+	rear++;
+}
+
+int get(){
+	if(front>rear){
+		printf("memory error!");
+		exit(1);
+	}
+	int k = queue[front];
+	front++;
+	return k;
+	
+}
+
+int main(){
+	int in = 0,ot = 0;
+	int i = 0;
+	while(i<10){
+		printf("수 입력 : ");
+		scanf("%d",&in);
+		put(in);
+		i++;
+	}i=0;
+	while(i<10){
+		ot = get();
+		printf("\n나온 값 : %d\n",ot);
+		i++;
+	}
+	return 0;
+}
