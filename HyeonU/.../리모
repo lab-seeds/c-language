@@ -1,0 +1,74 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<algorithm>
+#include<math.h>
+#include<time.h>
+//akdgka
+char maze[5][5];
+int n = 0,i,j;
+
+void gndin(){
+	fflush(stdin);
+	for(i = 0; i < 5; i++){
+		for(j = 0;j < 5; j++){
+			scanf("%s",&(maze[i][j]));
+		}
+	}
+	printf("\n");
+}
+
+void gndpt(){
+	int m,t;
+	for(m = 0; m < 5; m++){
+		for(t = 0;t < 5; t++){
+			printf("%c",(maze[m][t]));
+		}
+		printf("\n");
+	}
+}
+
+void nvgt(){
+	if((maze[i+1][j] == 'G')||(maze[i-1][j] == 'G')||(maze[i][j+1] == 'G')||(maze[i][j-1] == 'G')){
+		n++;
+		return;
+	}
+	else if(i<4&&(maze[i+1][j] == '.')){
+		n++;
+		maze[i+1][j] = n;
+	}
+	else if(i>0&&(maze[i-1][j] == '.')){
+		n++;	
+		maze[i-1][j] = n;
+		}
+	else if(j<4&&(maze[i][j+1] == '.')){
+		n++;
+		maze[i][j+1] = n;
+	}
+	else if(j>0&&(maze[i][j-1] == '.')){
+		n++;
+		maze[i][j-1] = n;
+	}
+}
+
+int main(){
+	gndin();
+	fdps();
+	printf("%d %d\n",i,j);
+	nvgt();
+	printf("%d",n);
+	
+	return 0;
+}
+
+/*
+# S # # #
+# . . . #
+# . # . #
+# . . . .
+# # # G #
+
+. = 길
+# = 벽
+S = 시작 지점
+G = 도착 지점
+*/ 
