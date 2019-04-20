@@ -1,0 +1,26 @@
+#include<stdio.h>
+int now, target;
+int count 30;
+
+void solve(int num, int cnt){
+  if(cnt > count) return;
+  if(num == target){
+     if(cnt < count) count = cnt;
+     return;  
+  }
+
+if (num < target) {
+solve (num+10, cnt+1);
+solve (num+5, cnt+1);
+solve (num+1, cnt+1)
+} else {
+solve (num-10, cnt+)
+solve (num-5, cnt+1):
+solve (num-1, cnt+1)
+}
+
+int main(void){
+ scanf ("%d %d",&now ,&target);
+ solve (now, 0);
+ printf("%d", count);
+}
