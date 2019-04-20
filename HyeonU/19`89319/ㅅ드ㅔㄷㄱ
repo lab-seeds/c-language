@@ -1,0 +1,63 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+#include<math.h>
+#include<algorithm>
+
+int main(){
+	int now, cng;
+	scanf("%d %d",&now,&cng);
+	int tar = cng - now;
+	int ut=0,dt=0,uf=0,df=0,un=0,dn=0;
+	int wi;
+	if(tar>0){
+		wi = 1;
+		while(tar != 0){
+			if(tar-10>=0){
+				tar -= 10;
+				ut++;
+			}
+			else if(tar-5>=0){
+				tar -= 5;
+				uf++;
+			}
+			else if(tar-1>=0){
+				tar -= 1;
+				un++;
+			}
+		}
+	}
+	else if(tar<0){
+		wi = -1;
+		while(tar != 0){
+			if(tar+10<=0){
+				tar += 10;
+				dt++;
+			}
+			else if(tar+5<=0){
+				tar += 5;
+				df++;
+			}
+			else if(tar+1<=0){
+				tar += 1;
+				dn++;
+			}
+		}
+	}
+	else{
+		wi = 0;
+	}
+	
+	switch(wi){
+		case -1:
+			printf("-10 => %d\n-5 => %d\n-1 => %d",dt,df,dn);
+			break;
+		case 0:
+			printf("imi doem!");
+			break;
+		case 1:
+			printf("+10 => %d\n+5 => %d\n+1 => %d",ut,uf,un);
+			break;
+	}
+	return 0;
+}
