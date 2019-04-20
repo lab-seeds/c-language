@@ -1,0 +1,56 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+#include<math.h>
+#include<algorithm>
+int sum=0x7fffffff, mp[11][11],nc[11];
+void srch(int nd, int etg){
+	if(nd == 7){
+		if(etg<sum){
+			sum = etg;
+			return;
+		}
+	}
+	int i;
+	for(i=1;i<8;i++){
+		if(!nc[i]&&mp[nd][i]){
+			nc[i] = 1;
+			srch(i,etg + mp[nd][i]);
+			nc[i] = 0;
+		}
+	}
+}
+int main(){
+	int i;
+	int j,m,t;
+	for(i=0; i<11; i++){
+		scanf("%d %d %d",&j,&m,&t);
+		mp[j][m] = t;
+		mp[m][j] = t;
+	}
+	for(int a = 0; a< 11; a++){
+		for(int b = 0; b<11 ; b++){
+			printf("%d   ",mp[a][b]);
+		}
+		printf("\n");
+	}
+	nc[1] = 1;
+	srch(1,0);
+	printf("%d\n", (sum==0x7fffffff)?-1:sum);
+	return 0;
+}
+
+
+/*
+1 2 47
+1 3 69
+2 4 57
+2 5 124
+3 4 37
+3 5 59
+3 6 86
+4 6 27
+4 7 94
+5 7 21
+6 7 40
+*/
