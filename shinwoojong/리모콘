@@ -1,1 +1,35 @@
+#include <stdio.h>
 
+int main()
+{
+	int n,m,cnt=0;
+	int a;
+	scanf("%d %d", &n, &m);
+	
+
+	
+	while(1)
+	{
+		if(n+10<=m)
+		{
+			n=n+10;
+			cnt++;
+		}
+		else if(n+5<=m)
+		{
+			n=n+5;
+			cnt++;
+		}
+		else if(n+1<=m)
+		{
+			n=n+1;
+			cnt++;
+		}
+		
+		if(n==m) break;	
+	}
+	
+	printf("%d", cnt);
+	
+	return 0;
+}
