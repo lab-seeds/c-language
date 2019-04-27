@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+int main(){ // 안해 
+	int in;
+	printf("입력 : ");
+	fflush(stdin);
+	scanf("%d",&in);
+	int i = 1;
+	int cnt = 1;
+	int j;
+	if(in == cnt){
+		printf("출력 : %d",2);
+		return 0;
+	}
+	else{
+		do{
+			j = 2;
+			i++;
+			while(i>j){
+				if(i%j == 0){
+					break;
+				}
+				else{
+					j++;
+					if(j== i){
+						cnt++;
+						printf("%d    %d\n",i,j);
+					}
+				}
+				
+			}			
+		}while(cnt != in);
+	}
+	printf("출력 : %d",i);
+	return 0;
+}
