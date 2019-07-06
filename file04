@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <string.h>
+// space divide 
+int main(){
+	char st[101], dst[50][101];
+	int len;
+	int cnt1=0, cnt2=0;
+	int i;
+	
+	FILE *in = fopen("input04.txt","r");
+	FILE *out = fopen("output04.txt","w");
+	fgets(st, 101, in); //fgets : standard input and output, fix then max count 101
+	len = strlen(st);
+	                    // line breaking -> chnage null valuse \n -> \0
+	if(st[len-1]=='\n'){
+		st[len-1]= '\0';
+		len--;
+	} 
+	for(i=0;i<=len;i++){
+		if(st[i] == ' ' || st[i]=='\0'){
+			 dst[cnt1][cnt2]= '\0';
+			 cnt1++;
+			 cnt2 = 0;
+		}else{
+			dst[cnt1][cnt2] = st[i];
+			cnt2++;
+		}
+	}
+	for(i=0;i< cnt1; i++){
+	    fputs(dst[i],out);
+	    fputc('\n',out);
+	    
+	}
+	fclose(in);
+	fclose(out);
+	return 0;
+}
+
+
+// puts : 출력 후 자동 줄 바꿈
+// fputs : 출력 후 줄 바꾸지 않고 멈춤
+// printf("%d", a)   fprintf(out,"%d", a)
+// scanf("%d", &a)  fscanf(in,"%d", &a)
+// putchar('a')    fputc, putc('a', out)
+// c=getchar();  c=fgetc(in)
+// puts("abcd")   fputs("abcd", out)
+// gets(s)        fgets(s, 100, in)
+
+  
